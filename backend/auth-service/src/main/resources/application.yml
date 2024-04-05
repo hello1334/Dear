@@ -1,0 +1,43 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: auth-service
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      host: j10a103.p.ssafy.io
+      port: 6379
+      password: dear1234
+
+oauth:
+  google:
+    client-id: 568102117306-39b7q4qr5jgvhklrvl9sl0qjt5k9voai.apps.googleusercontent.com
+    client-secret: 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
+    token-uri: https://oauth2.googleapis.com/token
+    resource-uri: https://www.googleapis.com/oauth2/v2/userinfo
+  naver:
+    client-id: 5KUjOaliIykYlEz1H7BV
+    client-secret: OTUzsEAlrc
+    token-uri: https://nid.naver.com/oauth2.0/token
+    resource-uri: https://openapi.naver.com/v1/nid/me
+    state: 1234asdf
+  kakao:
+    client-id: 67bb5110f999c324ecc8b0d12e18c74e
+    client-secret:
+    token-uri: https://kauth.kakao.com/oauth/token
+    resource-uri: https://kapi.kakao.com/v2/user/me
+
+jwt:
+  secretKey: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+  # 배포
+  accessExpirationTime: 3600 # 1시간
+  refreshExpirationTime: 86400 # 1일
+  # 로컬
+#  accessExpirationTime: 10 # 10초
+#  refreshExpirationTime: 60 # 60초

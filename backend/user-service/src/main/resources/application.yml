@@ -1,0 +1,28 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  data:
+    redis:
+      host: j10a103.p.ssafy.io
+      port: 6379
+      password: dear1234
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAYRDREYLRMAQMXHNC
+      secret-key: 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
+    region:
+      static: ap-northeast-2
+    s3:
+      bucket: dear103
+

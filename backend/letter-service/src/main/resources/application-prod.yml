@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.202.37.220:5020/dear
+    username: S10P22A103
+    password: dear1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  # kafka 설정
+  kafka:
+    bootstrap-servers: dear103.store:9092
+    consumer:
+      bootstrap-servers: dear103.store:9092
+      group-id: letter-group # 여기만 다름
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: dear103.store:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  ssl:
+    enabled: true
+    key-store: classpath:/keystore.p12
+    key-store-type: PKCS12
+    key-store-password: dear1234
+
+url:
+  id-from-nickname: https://dear103.store:8020/users/id-from-nickname

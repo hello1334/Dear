@@ -1,0 +1,5 @@
+domain:
+  auth-service: http://localhost:8010
+  user-service: http://localhost:8020
+  letter-service: http://localhost:8030
+  ai-service: http://70.12.247.56:8080

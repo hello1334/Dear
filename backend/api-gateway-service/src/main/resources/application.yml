@@ -1,0 +1,30 @@
+server:
+  port: 8000
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: api-gateway-service
+
+  profiles:
+    active: dev
+
+  cloud:
+    gateway:
+      mvc:
+        http-client:
+          connect-timeout: 300000
+          read-timeout: 300000
+
+  data:
+    redis:
+      host: dear103.store
+      port: 6379
+      password: dear1234
+
+jwt:
+  secret-key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351

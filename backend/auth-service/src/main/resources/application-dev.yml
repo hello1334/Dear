@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dear-user
+    username: root
+    password: admin
+
+oauth:
+  google:
+    redirect-uri: http://localhost:3000/login/google
+    login-uri: https://accounts.google.com/o/oauth2/v2/auth?client_id=568102117306-39b7q4qr5jgvhklrvl9sl0qjt5k9voai.apps.googleusercontent.com&redirect_uri=http://localhost:3000/login/google&response_type=code&scope=email profile
+  naver:
+    redirect-uri: http://localhost:3000/login/naver
+    login-uri: https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=5KUjOaliIykYlEz1H7BV&redirect_uri=http://localhost:3000/login/naver&state=1234asdf
+  kakao:
+    redirect-uri: http://localhost:3000/login/kakao
+    login-uri: https://kauth.kakao.com/oauth/authorize?client_id=67bb5110f999c324ecc8b0d12e18c74e&redirect_uri=http://localhost:3000/login/kakao&response_type=code

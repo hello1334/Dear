@@ -1,0 +1,12 @@
+server:
+  ssl:
+    enabled: true
+    key-store: classpath:/keystore.p12
+    key-store-type: PKCS12
+    key-store-password: dear1234
+
+domain:
+  auth-service: https://dear103.store:8010
+  user-service: https://dear103.store:8020
+  letter-service: https://dear103.store:8030
+  ai-service: http://70.12.247.56:8080

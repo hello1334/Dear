@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.202.37.220:5010/dear
+    username: S10P22A103
+    password: dear1234
+
+server:
+  ssl:
+    enabled: true
+    key-store: classpath:/keystore.p12
+    key-store-type: PKCS12
+    key-store-password: dear1234
+
+oauth:
+  google:
+    redirect-uri: https://dear103.store/login/google
+    login-uri: https://accounts.google.com/o/oauth2/v2/auth?client_id=568102117306-39b7q4qr5jgvhklrvl9sl0qjt5k9voai.apps.googleusercontent.com&redirect_uri=https://dear103.store/login/google&response_type=code&scope=email profile
+  naver:
+    redirect-uri: https://dear103.store/login/naver
+    login-uri: https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=2RZB0RNmfU1MewuxKt25&redirect_uri=https://dear103.store/login/naver&state=1234asdf
+  kakao:
+    redirect-uri: https://dear103.store/login/kakao
+    login-uri: https://kauth.kakao.com/oauth/authorize?client_id=67bb5110f999c324ecc8b0d12e18c74e&redirect_uri=https://dear103.store/login/kakao&response_type=code

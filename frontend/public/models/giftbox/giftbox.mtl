@@ -1,0 +1,9 @@
+# exported by https://3dviewer.net
+newmtl giftbox
+Kd 0.5882352941176471 0.5882352941176471 0.5882352941176471
+d 1
+Ka 0 0 0
+Ks 0 0 0
+Ns 20
+map_Kd giftbox_Albedo.png
+bump giftbox_Normal.png
