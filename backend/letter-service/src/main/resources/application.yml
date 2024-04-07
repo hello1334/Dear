@@ -13,11 +13,11 @@ spring:
 cloud:
   aws:
     credentials:
-      access-key: AKIAYRDREYLRMAQMXHNC
-      secret-key: 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
+      access-key: 
+      secret-key: 
     region:
       static: ap-northeast-2
     s3:
       bucket: dear103
 openai:
-  api-key: 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
+  api-key: 
